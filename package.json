@@ -1,0 +1,24 @@
+{
+  "name": "@ngx-ext/disabled-autocomplete",
+  "version": "0.0.1-RC1",
+  "schematics": "./schematics/collection.json",
+  "ng-add": {
+    "save": "dependencies"
+  },
+  "scripts": {
+    "build": "ng build disabled-autocomplete --prod",
+    "build:schematics": "../../node_modules/.bin/tsc -p tsconfig.schematics.json",
+    "copy:schemas": "rsync -R schematics/*/schema.json ../../dist/disabled-autocomplete/",
+    "copy:files": "rsync -R schematics/*/files/** ../../dist/disabled-autocomplete/",
+    "copy:collection": "cp schematics/collection.json ../../dist/disabled-autocomplete/schematics/collection.json",
+    "postbuild": "npm run build:schematics && npm run copy:collection"
+  },
+  "peerDependencies": {
+    "@angular/common": ">= 2",
+    "@angular/core": ">= 2"
+  },
+  "dependencies": {
+    "@ngx-ext/schematics-api": "0.0.1",
+    "tslib": "^2.0.0"
+  }
+}
