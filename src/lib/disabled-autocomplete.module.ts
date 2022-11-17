@@ -3,6 +3,6 @@ import { DisabledAutocompleteDirective } from './disabled-autocomplete.directive
 
 @NgModule({
   declarations: [DisabledAutocompleteDirective],
-  exports: [DisabledAutocompleteDirective]
+  exports: [DisabledAutocompleteDirective],
 })
 export class DisabledAutocompleteModule { }

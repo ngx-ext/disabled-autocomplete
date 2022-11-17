@@ -17,7 +17,7 @@ Or manually: `npm install @ngx-ext/disabled-autocomplete`, and then import `Disa
 ```
 
 ### How it works?
-* Makes the input `readonly` until focused (with fix for mobile Safari)
+* Makes the input `readonly` until focused (with a fix for mobile Safari)
 * Sets random id (if no id defined already)
 * Sets `autocomplete="new-password"`
 * Sets `autocapitalize="none"` (only if not set)
